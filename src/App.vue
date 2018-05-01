@@ -57,6 +57,23 @@ export default {
     
   },
   created(){
+    var ua = navigator.userAgent;
+
+var ipad = ua.match(/(iPad).*OS\s([\d_]+)/),
+
+isIphone =!ipad && ua.match(/(iPhone\sOS)\s([\d_]+)/),
+
+isAndroid = ua.match(/(Android)\s+([\d.]+)/),
+
+isMobile = isIphone || isAndroid;
+
+//判断
+
+if(isMobile){
+   alert("暂未适配手机，请使用电脑预览，ipad也可")
+}else{
+   
+}
     setTimeout( ()=>{
            this.index = 0;
     },500)
