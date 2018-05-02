@@ -246,7 +246,6 @@
                   border-radius: 3px;
                   display: flex;
                   flex-direction: column;
-                  overflow: scroll;
                   justify-content: space-around;
                   >p,div{
                       flex:1
