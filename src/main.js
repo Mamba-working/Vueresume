@@ -100,7 +100,7 @@ const store = new Vuex.Store({
     removeProject(state, data) {
 
       let index = state.resume.project.indexOf(data.item)
-      if (index > 0) {
+      if (state.resume.project.length > 1) {
         state.resume.project[index].show = false;
         setTimeout(() => {
           state.resume.project.splice(index, 1)
@@ -139,7 +139,7 @@ const store = new Vuex.Store({
     },
     removeSkill(state, data) {
       let index = state.resume.skill.indexOf(data.item)
-      if (index > 0) {
+      if (state.resume.skill.length > 1) {
         state.resume.skill[index].show = false;
         setTimeout(() => {
           state.resume.skill.splice(index, 1)
